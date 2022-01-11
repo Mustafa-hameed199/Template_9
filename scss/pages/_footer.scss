@@ -1,0 +1,16 @@
+/* ◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾  Footer  ◾◾◾◾◾◾◾◾◾◾◾◾◾   */
+.footer {
+  display: grid;
+  place-items: center;
+  text-align: center;
+  overflow: hidden;
+  p.un-reveal {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+    a {
+      color: $main-blue;
+      transition: .3s ease;
+      &:hover { color: $main-red }
+    }
+}

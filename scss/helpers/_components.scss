@@ -1,0 +1,16 @@
+/* ◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾  Main Heading Component  ◾◾◾◾◾◾◾◾◾◾◾◾◾   */
+.main-heading {
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 44px;
+    letter-spacing: 0.25px;
+    color: $main-text_clr;
+    text-transform: capitalize;
+    margin: 0 0 .5em;
+    span:first-child {
+        color: $main_blue;
+    }
+    span:last-child {
+        color: $main_red;
+    }
+}

@@ -1,0 +1,113 @@
+/* ◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾  Blog  ◾◾◾◾◾◾◾◾◾◾◾◾◾   */
+.contact {
+  padding: $sec-padding 0;
+  background-image: url(..//images/contact-bg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  overflow: hidden;
+}
+
+.contact__box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  @include break (medium) { 
+    flex-direction: row;
+    > * { flex-basis: 50% }
+  }
+
+  .text {
+    &.un-reveal { 
+      transform: translatex(-100%);
+      opacity: 0;
+    }
+    color: white;
+    text-align: center;
+    @include break(medium) { text-align: left }
+    .title {
+      text-transform: capitalize;
+      font-size: 30px;
+      letter-spacing: .25px;
+      line-height: 44px;
+      font-weight: 700;
+      margin-bottom :2rem;
+    }
+    
+    .desc {
+      color: inherit;
+      margin: 0 0 1.5rem;
+    }
+
+    .address {
+      font-size: 20px;
+      font-weight: 700;
+      line-height:2;
+      color: inherit;
+
+      i {
+        background: white;
+        color: $main-red;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        margin: 0 1.5rem;
+        display: inline-grid;
+        place-items: center;
+      }
+
+      a {
+        font-size: 15px;
+        font-weight: 400;
+      }
+    }
+  }
+
+  .form {
+    &.un-reveal { 
+      transform: translatex(100%);
+      opacity: 0;
+    }
+    background: white;
+    border-radius: 25px;
+    padding: 4rem 2rem;
+
+    form {
+      border-radius: inherit;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      row-gap: 1rem;
+
+      > * { 
+        &:focus { outline: none }
+        border-radius: inherit;
+        border: none;
+        font-size: 15px;
+        color: $main-text_clr;
+        background-color: $contact-input_bg_clr;
+        padding: 1rem 1.5rem;
+        width: 100%;
+      }
+
+      .name,.name2 { @include break(medium) { width: 47.5% } }
+
+      .message { 
+        resize: none;
+        transition: .3s ease;
+        &:focus { box-shadow: 0 0 0 5px #C2DAFE }
+      }
+
+      .sub { 
+        background: $main-blue;
+        color: white;
+        width: fit-content;
+        transition: .5s ease;
+        &:hover { background: $main-red }
+        cursor: pointer;
+      }
+    }
+  }
+}

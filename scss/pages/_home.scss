@@ -1,0 +1,102 @@
+/* ◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾  Home  ◾◾◾◾◾◾◾◾◾◾◾◾◾   */
+.home {
+  padding: $sec_padding 0;
+  position: relative;
+  overflow: hidden;
+
+  &__bg-img {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    &.right {
+      right: 0;
+    }
+    &.left {
+      left: 0;
+    }
+  }
+
+  &__box {
+    display: flex;
+    flex-direction: column;
+    @include break(medium) { flex-direction: row }
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    .home__text {
+      flex-basis: 75%;
+    }
+  }
+}
+
+.home__text {
+  text-align: center;
+  &.un-reveal {
+    transform: translatex(-100%);
+    @include break(medium) { transition-delay: 1s }
+    transition-delay: .5s;
+    opacity: 0;
+  }
+  @include break(medium) { text-align: left }
+  .home__welcome {
+    text-transform: uppercase;
+    color: $main_red;
+    font-weight: 500;
+    font-size: 18px;
+    margin: 0 0 1rem;
+  }
+  .main-heading {
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 72px;
+  }
+  .home__desc {
+    margin: 15px 0 30px;
+    a {
+      color: $main_blue;
+    }
+  }
+
+  .home__input {
+    position: relative;
+    @include break(large) { width: 95% }
+
+    input {
+      width: 100%;
+      border: none;
+      background: $main_blue;
+      padding: 1.5rem 2rem;
+      border-radius: 100vw;
+      caret-color: white;
+      color: white;
+      font-size: 15px;
+      letter-spacing: 0.25px;
+      &::placeholder {color: white }
+      &:focus { outline: none }
+    }
+    .home__btn {
+      position: absolute;
+      right: .5rem;
+      top: 50%;
+      transform: translatey(-50%);
+      border: none;
+      color: $main_red;
+      text-transform: capitalize;
+      border-radius: 100vw;
+      padding: 1rem 1.5rem ;
+      cursor: pointer;
+      background: #fff;
+    }
+  }
+}
+
+.home__img {
+  flex-basis: 100%;
+  @include break(medium) { flex-basis: 85% }
+  &.un-reveal {
+    transform: translatex(100%);
+    @include break(medium) {transition-delay: .5s }
+    transition-delay: 1s;
+    opacity: 0;
+  }
+}

@@ -1,0 +1,28 @@
+// Variables
+@import "./variables";
+
+// Reset
+@import "./reset";
+
+// Mixins
+@import "./helpers/mixin";
+
+// Media
+@import "./media";
+
+// Common
+@import "./helpers/components";
+
+// reveal Elements on scroll
+@import "./revealELement";
+
+// ------------------- Pages -----------
+@import "./pages/loader";
+@import "./pages/header";
+@import "./pages/home";
+@import "./pages/about-us";
+@import "./pages/services";
+@import "./pages/portfolio";
+@import "./pages/blog";
+@import "./pages/contact";
+@import "./pages/footer";

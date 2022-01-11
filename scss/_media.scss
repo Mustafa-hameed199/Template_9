@@ -1,0 +1,29 @@
+/* ◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾◾  Media Container  ◾◾◾◾◾◾◾◾◾◾◾◾◾   */
+.container {
+    padding-right: 12px;
+    padding-left: 12px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.container {
+    // Mobile Screen
+    @include break(mobile) {
+        max-width: 540px;
+    }
+
+    // Small Screen
+    @include break(small) {
+        width: 750px;
+    }
+
+    // Medium Screen
+    @include break(medium) {
+        width: 960px;
+    }
+
+    // Large Screen
+    @include break(large) {
+        width: 1140px;
+    }
+}
