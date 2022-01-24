@@ -5,7 +5,15 @@ const loader = document.querySelector('.loader');
 
 window.addEventListener('load', () => {
   loader.classList.add('hide')
-  setTimeout( () => loader.style.display = "none" , 600)
+  setTimeout( () =>{
+    loader.style.display = "none";
+    revealElements(); // intersgit ectionObserver function 
+    
+  } , 325);
+
+
+
+
 })
 // ⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛ Header ⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛
 const nav__ul = document.querySelector(".nav__ul");
@@ -116,15 +124,17 @@ window.addEventListener("scroll", () => {
   }
 })
 // ⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛ Reveal Elements ⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛
-let options = {
-  threshold: 0,
-  rootMargin: '0px 0px -25px',
+function revealElements() {
+  let options = {
+    threshold: 0,
+    rootMargin: '0px 0px -25px',
+  }
+  
+  let ob = new IntersectionObserver(reveal , options)
+  
+  function reveal(all) { all.forEach(el =>  el.isIntersecting ? el.target.classList.add('spotted') : null ) }
+  document.querySelectorAll('.spot').forEach(el => ob.observe(el))
 }
-
-let ob = new IntersectionObserver(reveal , options)
-
-function reveal(all) { all.forEach(el =>  el.isIntersecting ? el.target.classList.add('spotted') : null ) }
-document.querySelectorAll('.spot').forEach(el => ob.observe(el))
 
 
 

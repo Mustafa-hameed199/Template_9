@@ -12,7 +12,7 @@
   height: 100%;
   display: grid;
   place-items: center;
-  transition: opacity .5s ease-in;
+  transition: opacity .3s ease-out;
   pointer-events: none;
   
   &.hide {
