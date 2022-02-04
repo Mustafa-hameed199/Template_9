@@ -7,13 +7,8 @@ window.addEventListener('load', () => {
   loader.classList.add('hide')
   setTimeout( () =>{
     loader.style.display = "none";
-    revealElements(); // intersgit ectionObserver function 
-    
+    revealElements(); // intersectionObserver function 
   } , 325);
-
-
-
-
 })
 // ⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛ Header ⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛
 const nav__ul = document.querySelector(".nav__ul");

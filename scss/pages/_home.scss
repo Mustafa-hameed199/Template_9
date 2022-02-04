@@ -42,13 +42,13 @@
     text-transform: uppercase;
     color: $main_red;
     font-weight: 500;
-    font-size: 18px;
+    font-size: clamp(1rem , .5rem + 1vw , 1.1rem);
     margin: 0 0 1rem;
   }
   .main-heading {
-    font-size: 50px;
+    font-size: clamp(2.2rem , 1rem + 4vw , 3.125rem);
     font-weight: 700;
-    line-height: 72px;
+    line-height: clamp(2rem , 2rem + 3vw , 5rem);
   }
   .home__desc {
     margin: 15px 0 30px;
@@ -69,7 +69,7 @@
       border-radius: 100vw;
       caret-color: white;
       color: white;
-      font-size: 15px;
+      font-size: clamp(.75rem , 3vw + .25rem , 1rem);
       letter-spacing: 0.25px;
       &::placeholder {color: white }
       &:focus { outline: none }
@@ -81,9 +81,10 @@
       transform: translatey(-50%);
       border: none;
       color: $main_red;
+      font-size: clamp(.75rem , 3vw + .25rem , 1rem);
       text-transform: capitalize;
       border-radius: 100vw;
-      padding: 1rem 1.5rem ;
+      padding: 1rem clamp(1rem , 2vw + .5rem , 1.5rem);
       cursor: pointer;
       background: #fff;
     }
